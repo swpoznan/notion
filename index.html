@@ -70,12 +70,14 @@
       const hrs = today.getHours();
       let greet = "";
 
-      if (hrs < 12)
+      if (hrs >= 06 && hrs < 12)
         greet = "Доброе утро";
       else if (hrs >= 12 && hrs < 18)
         greet = "Добрый день";
-      else
+      else if (hrs >= 18 && hrs < 23)
         greet = "Добрый вечер";
+      else
+        greet = "Чего не спишь?";
 
       document.getElementById("greet").innerHTML = greet;
     }
